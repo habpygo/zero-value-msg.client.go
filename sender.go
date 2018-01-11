@@ -1,4 +1,4 @@
-package mamgoiota
+package gmam
 
 import (
 	"github.com/iotaledger/mamgoiota/mamutils"

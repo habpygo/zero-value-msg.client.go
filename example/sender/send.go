@@ -25,9 +25,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/giota/mamgoiota/connections"
-	"github.com/iotaledger/mamgoiota/connections"
-	//"github.com/iotaledger/mamgoiota"
+	gmam "iota/mam.client.go"
 )
 
 //This address can be used to see history of test messages
@@ -40,8 +38,7 @@ var seed = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 func main() {
 	//"https://testnet140.tangle.works"
 	//WARNING: The nodes have a nasty habit to go on/off line without warning or notice. If this happens try to find another one.
-	c, err := connections.NewConnection("http://eugene.iota.community:14265", seed)
-	//c, err := connections.NewConnection("http://node02.iotatoken.nl:14265", seed)
+	c, err := gmam.NewConnection("http://eugene.iota.community:14265", seed)
 	if err != nil {
 		panic(err)
 	}
@@ -49,7 +46,7 @@ func main() {
 	msgTime := time.Now().UTC().String()
 	message := "It's the most wonderful message of the year ;-) on: " + msgTime
 
-	id, err := mamgoiota.Send(address, 0, message, c)
+	id, err := gmam.Send(address, 0, message, c)
 	if err != nil {
 		panic(err)
 	}

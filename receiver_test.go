@@ -1,11 +1,11 @@
-package mamgoiota
+package gmam
 
 import (
 	"fmt"
 	"testing"
 	"time"
 
-	"github.com/iotaledger/mamgoiota/mamutils"
+	"iota/mam.client.go/mamutils"
 
 	"github.com/iotaledger/giota"
 	"github.com/stretchr/testify/assert"

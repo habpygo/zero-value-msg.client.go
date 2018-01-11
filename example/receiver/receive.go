@@ -25,22 +25,22 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/iotaledger/mamgoiota"
+	gmam "iota/mam.client.go"
 )
 
 func main() {
 	address := "RQP9IFNFGZGFKRVVKUPMYMPZMAICIGX9SVMBPNASEBWJZZAVDCMNOFLMRMFRSQVOQGUVGEETKYFCUPNDDWEKYHSALY"
 	provider := "http://node02.iotatoken.nl:14265"
-	c, err := mamgoiota.NewConnection(provider, "")
+	c, err := gmam.NewConnection(provider, "")
 	if err != nil {
 		panic(err)
 	}
 
-	var lastTransactions []mamgoiota.Transaction
+	var lastTransactions []gmam.Transaction
 	doEvery(5*time.Second, func(t time.Time) {
 		fmt.Println("Looking for new messages")
 
-		newTransactions, err := mamgoiota.ReadTransactions(address, c)
+		newTransactions, err := gmam.ReadTransactions(address, c)
 		if err != nil {
 			panic(err)
 		}

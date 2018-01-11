@@ -24,18 +24,18 @@ package main
 import (
 	"fmt"
 
-	"github.com/iotaledger/mamgoiota"
+	gmam "iota/mam.client.go"
 )
 
 func main() {
 	address := "RQP9IFNFGZGFKRVVKUPMYMPZMAICIGX9SVMBPNASEBWJZZAVDCMNOFLMRMFRSQVOQGUVGEETKYFCUPNDDWEKYHSALY"
 	provider := "http://node02.iotatoken.nl:14265"
-	c, err := mamgoiota.NewConnection(provider, "")
+	c, err := gmam.NewConnection(provider, "")
 	if err != nil {
 		panic(err)
 	}
 
-	pastTransactions, err := mamgoiota.ReadTransactions(address, c)
+	pastTransactions, err := gmam.ReadTransactions(address, c)
 	if err != nil {
 		panic(err)
 	}

@@ -15,7 +15,7 @@ go get -u github.com/iotaledger/giota
 After that you can download the mamgoiota package.
 
 ```javascript
-go get -u github.com/habpygo/mamgoiota
+go get -u github.com/habpygo/mam.client.go
 ```
 
 To be able to do testing and assertions you have to install the `stretchr` package
@@ -31,10 +31,10 @@ go get -u github.com/stretchr/testify
 
 #### Create a new Connection
 ```go
-import "github.com/iotaledger/mamgoiota"
+import gmam "github.com/habpygo/mam.client.go"
 
 func main(){
-    c, err := mamgoiota.NewConnection("someNodeURL", "yourSeed")
+    c, err := gmam.NewConnection("someNodeURL", "yourSeed")
     if c != nil && err == nil{
         fmt.Println("Connection is valid")
     }
@@ -51,14 +51,14 @@ WARNING: Nodes have a nasty habit to go on/off line without warning or notice. I
 
 #### Send a MAM to the IOTA tangle
 ```go
-import "github.com/iotaledger/mamgoiota"
+import gmam "github.com/habpygo/mam.client.go"
 
 func main(){
-    c, err := mamgoiota.NewConnection("someNodeURL", "yourSeed")
+    c, err := gmam.NewConnection("someNodeURL", "yourSeed")
     if err != nil{
         panic(err)
     }
-    id, err := Send("the receiving address", 0, "your stringified message", c)
+    id, err := gmam.Send("the receiving address", 0, "your stringified message", c)
     if err != nil{
         panic(err)
     }
@@ -72,15 +72,15 @@ If you want to transfer value aswell (here 100 IOTA) call the send method like t
 #### Read data from the IOTA tangle
 Reading all transaction received by a certain adress:
 ```go
-import "github.com/iotaledger/mamgoiota"
+import gmam "github.com/habpygo/mam.client.go"
 
 func main(){
-    c, err := NewConnection("someNodeURL", "")
+    c, err := gmam.NewConnection("someNodeURL", "")
     if err != nil{
         panic(err)
     }
 
-    ts, err := ReadTransactions("Receiving Address", c)
+    ts, err := gmam.ReadTransactions("Receiving Address", c)
     if err != nil{
         panic(err)
     }
@@ -95,15 +95,15 @@ The seed can be ommitted here, since reading does not require an account
 
 Reading a special transaction by transactionID:
 ```go
-import "github.com/iotaledger/mamgoiota"
+import gmam "github.com/habpygo/mam.client.go"
 
 func main(){
-    c, err := NewConnection("someNodeURL", "")
+    c, err := gmam.NewConnection("someNodeURL", "")
     if err != nil{
         panic(err)
     }
 
-    tx, err := ReadTransaction("Some transactionID", c)
+    tx, err := gmam.ReadTransaction("Some transactionID", c)
     if err != nil{
         panic(err)
     }

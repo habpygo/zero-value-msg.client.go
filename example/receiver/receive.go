@@ -25,7 +25,7 @@ import (
 	"fmt"
 	"time"
 
-	gmam "iota/mam.client.go"
+	gmam "github.com/habpygo/mam.client.go"
 )
 
 func main() {

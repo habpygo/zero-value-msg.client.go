@@ -11,7 +11,7 @@ import (
 func TestConnectionSend(t *testing.T) {
 	assert := assert.New(t)
 
-	c, err := NewConnection("http://node02.iotatoken.nl:14265", "SIERTBRUINSISBEZIGOMEENRONDJESAMENMETWIMAMENTTEMAKENOMZODESUBSIDIERONDTEKRIJGENH9")
+	c, err := NewConnection("http://node02.iotatoken.nl:14265", "DDUESHCVXWQWFOPTNGLQBGSSJNUUZ9JMEUWCYMFVZNZAXEVEODIYPXMQLDOLXPVYTTVWAUIJCZHOSGGEJ")
 	assert.Nil(err)
 
 	var someJSON struct {

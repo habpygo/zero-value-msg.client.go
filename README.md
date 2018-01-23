@@ -44,6 +44,8 @@ If you don't have a nodeURL try out one from: http://iotasupport.com/lightwallet
 
 If you don't have a seed yet, follow the description here: https://iota.readme.io/docs/securely-generating-a-seed
 
+If you have installed `giotan` you can easily generate a new seed by running `$ giotan new` then run `$ giotan addresses` and paste the generated address in the input field.
+
 Please keep in mind that you may NEVER loose this seed nor give it to anybody else, because the seed is the connection to your funds!
 
 WARNING: Nodes have a nasty habit to go on/off line without warning or notice. If this happens try to find another one.

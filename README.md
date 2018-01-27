@@ -131,6 +131,7 @@ If you pick up the transaction hash from the Terminal output and paste it into t
 
 If the Node is offline try another one, mentioned above.
 
+TODO's are also pertinent to `webmamgiota`.
 ### TODOs
 - [ ] GoDoc
 - [X] Travis (This appeared to be a (solved) giota lib error)

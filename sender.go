@@ -1,9 +1,9 @@
 package gmam
 
 import (
-	"github.com/iotaledger/mamgoiota/mamutils"
-
+	//"github.com/iotaledger/mamgoiota/mamutils"
 	"github.com/iotaledger/giota"
+	"iota/mam.client.go/mamutils"
 )
 
 type ApiSender interface {

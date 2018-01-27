@@ -4,6 +4,8 @@ Small project to implement Masked Authenticated Messaging on the IOTA tangle wit
 
 This project is still under construction (see TODO) with the aim to get IoT sensors and devices to send MAMs.
 
+Note: There will be import errors at the moment. Reason for some import statements not working is that we want to add `mamgoiota` to the `github.com/iotaledger` as `mam.client.go`. We have a question outstanding in Slack to the IOTA org regarding this, but up till now we have had no answer.  For the time being I suggest to rename the imports as you like.
+
 ## Install
 
 It is assumed that you have Golang installed. You also need to install the Go library API for IOTA which you can download at:
@@ -131,8 +133,8 @@ If the Node is offline try another one, mentioned above.
 
 ### TODOs
 - [ ] GoDoc
-- [ ] Travis
-- [ ] Make web-app
+- [X] Travis (This appeared to be a (solved) giota lib error)
+- [ ] Make web-app (see webmamgiota). Under construction
 - [ ] Read sensor data, e.g. RuuVi tag
 - [ ] More Read options
 - [X] Read by TransactionId

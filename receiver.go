@@ -5,9 +5,9 @@ import (
 	"sort"
 	"time"
 
-	"github.com/iotaledger/mamgoiota/mamutils"
-
+	//"github.com/iotaledger/mamgoiota/mamutils"
 	"github.com/iotaledger/giota"
+	"iota/mam.client.go/mamutils"
 )
 
 type Transaction struct {

@@ -1,13 +1,13 @@
-package gmam
+package communications
 
 import (
 	"fmt"
 	"sort"
 	"time"
 
-	//"github.com/iotaledger/mamgoiota/mamutils"
+	"github.com/habpygo/mam.client.go/mamutils"
+
 	"github.com/iotaledger/giota"
-	"iota/mam.client.go/mamutils"
 )
 
 type Transaction struct {

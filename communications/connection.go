@@ -1,4 +1,4 @@
-package gmam
+package communications
 
 import "github.com/iotaledger/giota"
 

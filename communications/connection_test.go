@@ -1,4 +1,4 @@
-package gmam
+package communications
 
 import (
 	"encoding/json"

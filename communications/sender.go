@@ -1,9 +1,8 @@
-package gmam
+package communications
 
 import (
-	//"github.com/iotaledger/mamgoiota/mamutils"
+	"github.com/habpygo/mam.client.go/mamutils"
 	"github.com/iotaledger/giota"
-	"iota/mam.client.go/mamutils"
 )
 
 type ApiSender interface {

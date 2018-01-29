@@ -137,7 +137,7 @@ TODO's are also pertinent to `webmamgiota`.
 - [X] Travis (This appeared to be a (solved) giota lib error)
 - [ ] Make web-app (see webmamgiota). Under construction
 - [ ] Read sensor data, e.g. RuuVi tag
-- [ ] Make use of Merkel tree 
+- [ ] Make use of Merkle tree 
 - [ ] More Read options
 - [X] Read by TransactionId
 

@@ -1,4 +1,4 @@
-# mamgoiota
+# mam.client.go
 
 Small project to implement Masked Authenticated Messaging on the IOTA tangle with Golang.
 
@@ -137,6 +137,7 @@ TODO's are also pertinent to `webmamgiota`.
 - [X] Travis (This appeared to be a (solved) giota lib error)
 - [ ] Make web-app (see webmamgiota). Under construction
 - [ ] Read sensor data, e.g. RuuVi tag
+- [ ] Make use of Merkel tree 
 - [ ] More Read options
 - [X] Read by TransactionId
 

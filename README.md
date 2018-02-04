@@ -1,7 +1,9 @@
 # mam.client.go
 
-Small project to implement Masked Authenticated Messaging on the IOTA tangle with Golang.
+WARNING: Do not use this in production! 
+MAM specification is not fully implemented yet. Transactions are not secure.
 
+Small project to implement Masked Authenticated Messaging on the IOTA tangle with Golang.
 This project is still under construction (see TODO) with the aim to get IoT sensors and devices to send MAMs.
 
 Note: There will be import errors at the moment. Reason for some import statements not working is that we want to add `mamgoiota` to the `github.com/iotaledger` as `mam.client.go`. We have a question outstanding in Slack to the IOTA org regarding this, but up till now we have had no answer.  For the time being I suggest to rename the imports as you like.
@@ -133,6 +135,7 @@ If the Node is offline try another one, mentioned above.
 
 TODO's are also pertinent to `webmamgiota`.
 ### TODOs
+- [ ] Implement MAM specs
 - [ ] GoDoc
 - [X] Travis (This appeared to be a (solved) giota lib error)
 - [ ] Make web-app (see webmamgiota). Under construction

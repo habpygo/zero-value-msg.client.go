@@ -1,12 +1,11 @@
 # mam.client.go
 
 WARNING: Do not use this in production! 
-MAM specification is not fully implemented yet. Transactions are not secure.
+MAM specification is not fully implemented yet. Transactions are not secure as Merkle Tree authentication has not been implemented yet.
 
 Small project to implement Masked Authenticated Messaging on the IOTA tangle with Golang.
 This project is still under construction (see TODO) with the aim to get IoT sensors and devices to send MAMs.
 
-Note: There will be import errors at the moment. Reason for some import statements not working is that we want to add `mamgoiota` to the `github.com/iotaledger` as `mam.client.go`. We have a question outstanding in Slack to the IOTA org regarding this, but up till now we have had no answer.  For the time being I suggest to rename the imports as you like.
 
 ## Install
 
@@ -44,16 +43,10 @@ func main(){
     }
 }
 ```
-If you don't have a nodeURL try out one from: http://iotasupport.com/lightwallet.shtml
+Recently IOTA has introduced a pretty feisty test environment and test sites. You can find some sites in package `metadata`.
 
-If you don't have a seed yet, follow the description here: https://iota.readme.io/docs/securely-generating-a-seed
-
-If you have installed `giotan` you can easily generate a new seed by running `$ giotan new` then run `$ giotan addresses` and paste the generated address in the input field.
-
-Please keep in mind that you may NEVER loose this seed nor give it to anybody else, because the seed is the connection to your funds!
-
-WARNING: Nodes have a nasty habit to go on/off line without warning or notice. If this happens try to find another one.
-
+If you don't have a seed yet, follow the description here: https://iota.readme.io/docs/securely-generating-a-seed 
+You can also use the `giotan` package. With this package you can easily generate a new seed by running `$ giotan new` then run `$ giotan addresses` and paste the generated address in the input field.
 
 #### Send a MAM to the IOTA tangle
 ```go
@@ -71,9 +64,8 @@ func main(){
     fmt.Printf("Send to the Tangle. TransactionId: %v\n", id)
 }
 ```
-After sending, you find your transaction here https://thetangle.org giving the TransactionId
+After sending, you find your transaction here https://testnet.thetangle.org/ giving the TransactionId
 
-If you want to transfer value aswell (here 100 IOTA) call the send method like this: ```Send("the receiving address", 100, "your stringified message", c)```.
 
 #### Read data from the IOTA tangle
 Reading all transaction received by a certain adress:

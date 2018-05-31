@@ -7,7 +7,7 @@ import (
 
 	"github.com/habpygo/mam.client.go/mamutils"
 
-	"github.com/iotaledger/giota"
+	"github.com/giota"
 )
 
 type Transaction struct {

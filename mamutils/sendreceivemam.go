@@ -26,7 +26,7 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/iotaledger/giota"
+	"github.com/giota"
 )
 
 //ToMAMTrytes checks its validity and casts to giota.Trytes.

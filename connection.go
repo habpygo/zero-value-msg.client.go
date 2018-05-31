@@ -1,6 +1,6 @@
 package communications
 
-import "github.com/iotaledger/giota"
+import "github.com/giota"
 
 //NewConnection establishes a connection with the given provider and the seed
 func NewConnection(provider, seed string) (*Connection, error) {
@@ -8,7 +8,7 @@ func NewConnection(provider, seed string) (*Connection, error) {
 		api:      giota.NewAPI(provider, nil),
 		seed:     seed,
 		security: 3,
-		mwm:      15,
+		mwm:      9,
 	}, nil
 }
 

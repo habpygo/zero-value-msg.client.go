@@ -26,30 +26,41 @@ import (
 	"time"
 
 	gmam "github.com/habpygo/mam.client.go"
+	"github.com/habpygo/mam.client.go/metadata"
 )
 
 //This address can be used to see history of test messages
 //It won't work with the provided seed for sending!
-var address = "KDFOXSUPVNEDGHTCLFJTOJIZFPNZHTHXUGCEGSUENLFKTFGRGNEE9UNFFUKMMMSHYJYONJMOWUP9RNVRBWJHFPWFSZ"
+//var address = "KDFOXSUPVNEDGHTCLFJTOJIZFPNZHTHXUGCEGSUENLFKTFGRGNEE9UNFFUKMMMSHYJYONJMOWUP9RNVRBWJHFPWFSZ"
+//var seed = "THISISTHETESTSENTENCETOEXPERIMENTWITHIOTATANGLEFORPROGRAMMINGUSECASESASWELLASFUN9"
 
 //Provide your own seed; this one won't work ;-)
-var seed = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9"
+//var seed = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9"
+//var address = "TVWZVZZLWSMLXYTFQNVQSAGCQLRRCUXMUDDQWJILNQGOIFKMA9PKBRKORIWOOF9WQLJWGVGTWUXPNNKNYSRBAWUWQC"
 
 func main() {
 	//"https://testnet140.tangle.works"
 	//WARNING: The nodes have a nasty habit to go on/off line without warning or notice. If this happens try to find another one.
-	c, err := gmam.NewConnection("http://eugene.iota.community:14265", seed)
+	//c, err := gmam.NewConnection("http://eugene.iota.community:14265", seed)
+	c, err := gmam.NewConnection(metadata.Provider, metadata.Seed)
 	if err != nil {
 		panic(err)
 	}
 
 	msgTime := time.Now().UTC().String()
-	message := "It's the most wonderful message of the year ;-) on: " + msgTime
+	message := "This message was generated on mam.client.go on: " + msgTime
 
-	id, err := gmam.Send(address, 0, message, c)
+	id, err := gmam.Send(metadata.Address, 0, message, c)
 	if err != nil {
 		panic(err)
 	}
 
 	fmt.Printf("Sent Transaction: %v\n", id)
 }
+
+/*
+https://nodes.testnet.iota.org:443
+https://nodes.testnet.thetangle.org:443
+https://testnet.thetangle.org:443
+https://node01.testnet.iotatoken.nl:16265
+*/

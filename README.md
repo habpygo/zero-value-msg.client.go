@@ -135,14 +135,14 @@ If the Node is offline try another one, mentioned above.
 
 TODO's are also pertinent to `webmamgiota`.
 ### TODOs
-- [ ] Implement MAM specs
+- [x] Implement MAM specs
 - [ ] GoDoc
-- [X] Travis (This appeared to be a (solved) giota lib error)
+- [ ] Travis (This appeared to be a (solved) giota lib error)
 - [ ] Make web-app (see webmamgiota). Under construction
 - [ ] Read sensor data, e.g. RuuVi tag
 - [ ] Make use of Merkle tree 
 - [ ] More Read options
-- [X] Read by TransactionId
+- [ ] Read by TransactionId
 
 
 

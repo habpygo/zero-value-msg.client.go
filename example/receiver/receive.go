@@ -26,12 +26,13 @@ import (
 	"time"
 
 	gmam "github.com/habpygo/mam.client.go"
+	"github.com/habpygo/mam.client.go/metadata"
 )
 
 func main() {
-	address := "RQP9IFNFGZGFKRVVKUPMYMPZMAICIGX9SVMBPNASEBWJZZAVDCMNOFLMRMFRSQVOQGUVGEETKYFCUPNDDWEKYHSALY"
-	provider := "http://node02.iotatoken.nl:14265"
-	c, err := gmam.NewConnection(provider, "")
+	//address := "TVWZVZZLWSMLXYTFQNVQSAGCQLRRCUXMUDDQWJILNQGOIFKMA9PKBRKORIWOOF9WQLJWGVGTWUXPNNKNYSRBAWUWQC"
+	//provider := "https://nodes.testnet.thetangle.org:443"
+	c, err := gmam.NewConnection(metadata.Provider, metadata.Seed)
 	if err != nil {
 		panic(err)
 	}
@@ -40,7 +41,7 @@ func main() {
 	doEvery(5*time.Second, func(t time.Time) {
 		fmt.Println("Looking for new messages")
 
-		newTransactions, err := gmam.ReadTransactions(address, c)
+		newTransactions, err := gmam.ReadTransactions(metadata.Address, c)
 		if err != nil {
 			panic(err)
 		}

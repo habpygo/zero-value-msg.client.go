@@ -1,10 +1,15 @@
 # mam.client.go
 
-WARNING: Do not use this in production! 
+WARNING: Do not use this in production! Under construction.
 MAM specification is not fully implemented yet. Transactions are not secure as Merkle Tree authentication has not been implemented yet.
 
 Small project to implement Masked Authenticated Messaging on the IOTA tangle with Golang.
 This project is still under construction (see TODO) with the aim to get IoT sensors and devices to send MAMs.
+
+Recently IOTA has introduced a pretty feisty test environment and test sites. You can find some sites in package `metadata`.
+
+If you don't have a seed yet, follow the description here: https://iota.readme.io/docs/securely-generating-a-seed or, you
+can use the `giotan` package ad https://github.com/iotaledger/giotan. With this package you can easily generate a new seed by running `$ giotan new` then run `$ giotan addresses` and paste the generated address in the input field.
 
 
 ## Install
@@ -43,10 +48,7 @@ func main(){
     }
 }
 ```
-Recently IOTA has introduced a pretty feisty test environment and test sites. You can find some sites in package `metadata`.
 
-If you don't have a seed yet, follow the description here: https://iota.readme.io/docs/securely-generating-a-seed 
-You can also use the `giotan` package. With this package you can easily generate a new seed by running `$ giotan new` then run `$ giotan addresses` and paste the generated address in the input field.
 
 #### Send a MAM to the IOTA tangle
 ```go

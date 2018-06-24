@@ -1,6 +1,6 @@
 # mam.client.go
 
-WARNING: Do not use this in production! Under construction.
+WARNING: Do not use this in a production environment! Under construction.
 MAM specification is not fully implemented yet. Transactions are not secure as Merkle Tree authentication has not been implemented yet.
 
 Small project to implement Masked Authenticated Messaging on the IOTA tangle with Golang.
@@ -9,7 +9,7 @@ This project is still under construction (see TODO) with the aim to get IoT sens
 Recently IOTA has introduced a pretty feisty test environment and test sites. You can find some sites in package `metadata`.
 
 If you don't have a seed yet, follow the description here: https://iota.readme.io/docs/securely-generating-a-seed or, you
-can use the `giotan` package ad https://github.com/iotaledger/giotan. With this package you can easily generate a new seed by running `$ giotan new` then run `$ giotan addresses` and paste the generated address in the input field.
+can use the `giotan` package at https://github.com/iotaledger/giotan. With this package you can easily generate a new seed by running `$ giotan new` then run `$ giotan addresses` and paste the generated address in the input field.
 
 
 ## Install
@@ -123,7 +123,7 @@ Then start the sender: `$ go run sender/send.go`.
 
 You can also read all the past transactions, i.e. messages + value,  at the address: `go run history/history.go`.
 
-If you pick up the transaction hash from the Terminal output and paste it into the input field on the site https://thetangle.org you find your transaction.
+If you pick up the transaction hash from the Terminal output and paste it into the input field on the site https://thetangle.org you find your transaction. 
 
 If the Node is offline try another one, mentioned above.
 

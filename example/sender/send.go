@@ -29,15 +29,6 @@ import (
 	"github.com/habpygo/mam.client.go/metadata"
 )
 
-//This address can be used to see history of test messages
-//It won't work with the provided seed for sending!
-//var address = "KDFOXSUPVNEDGHTCLFJTOJIZFPNZHTHXUGCEGSUENLFKTFGRGNEE9UNFFUKMMMSHYJYONJMOWUP9RNVRBWJHFPWFSZ"
-//var seed = "THISISTHETESTSENTENCETOEXPERIMENTWITHIOTATANGLEFORPROGRAMMINGUSECASESASWELLASFUN9"
-
-//Provide your own seed; this one won't work ;-)
-//var seed = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9"
-//var address = "TVWZVZZLWSMLXYTFQNVQSAGCQLRRCUXMUDDQWJILNQGOIFKMA9PKBRKORIWOOF9WQLJWGVGTWUXPNNKNYSRBAWUWQC"
-
 func main() {
 	//"https://testnet140.tangle.works"
 	//WARNING: The nodes have a nasty habit to go on/off line without warning or notice. If this happens try to find another one.
@@ -57,10 +48,3 @@ func main() {
 
 	fmt.Printf("Sent Transaction: %v\n", id)
 }
-
-/*
-https://nodes.testnet.iota.org:443
-https://nodes.testnet.thetangle.org:443
-https://testnet.thetangle.org:443
-https://node01.testnet.iotatoken.nl:16265
-*/

@@ -30,8 +30,6 @@ import (
 )
 
 func main() {
-	//address := "TVWZVZZLWSMLXYTFQNVQSAGCQLRRCUXMUDDQWJILNQGOIFKMA9PKBRKORIWOOF9WQLJWGVGTWUXPNNKNYSRBAWUWQC"
-	//provider := "https://nodes.testnet.thetangle.org:443"
 	c, err := gmam.NewConnection(metadata.Provider, metadata.Seed)
 	if err != nil {
 		panic(err)

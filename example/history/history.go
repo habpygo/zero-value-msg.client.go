@@ -24,22 +24,18 @@ package main
 import (
 	"fmt"
 
+	//gmam "github.com/habpygo/mam.client.go"
 	gmam "github.com/habpygo/mam.client.go"
 	"github.com/habpygo/mam.client.go/metadata"
 )
 
 func main() {
-	//address := "TVWZVZZLWSMLXYTFQNVQSAGCQLRRCUXMUDDQWJILNQGOIFKMA9PKBRKORIWOOF9WQLJWGVGTWUXPNNKNYSRBAWUWQC"
-	//	provider := "https://nodes.testnet.thetangle.org:443"
-	fmt.Println("provider is: ", metadata.Provider)
-	fmt.Println("address is: ", metadata.Address)
-	c, err := gmam.NewConnection(metadata.Provider, metadata.Seed)
+	c, err := gmam.NewConnection(metadata.Provider, "") //metadata.Seed
 	if err != nil {
 		panic(fmt.Errorf("Couldn't make a new connection, %v:", err))
 	}
 
 	pastTransactions, err := gmam.ReadTransactions(metadata.Address, c)
-	fmt.Println("pastTransactions is: ", pastTransactions)
 	if err != nil {
 		panic(fmt.Errorf("error in reading transactions %v ", err))
 	}

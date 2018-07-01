@@ -1,8 +1,8 @@
 package communications
 
 import (
-	"github.com/giota"
 	"github.com/habpygo/mam.client.go/mamutils"
+	"github.com/iotaledger/giota"
 )
 
 type ApiSender interface {

@@ -2,10 +2,10 @@
 Licensed under the MIT License, see LICENCE file for details.
 */
 
-/* Package pathdata contains the paths, addresses,
-http:// addresses and seeds
-*/
 package metadata
+
+/* WARNING: BY USING THE SEED AND ADDRESS BELOW ALL MESSAGES ARE VISIBLE TO THE WHOLE WORLD! */
+/* ********* -ONLY USE THIS FOR TESTING- ************ */
 
 var Seed = "BMYDBMQIKMPAVPY9CGQWSAQEVV9JAYDIZUOIWLQPGKLBIXEGY9S9BJBCQUSQODIYFUIEKPWAHUPNXQKAH"
 
@@ -16,7 +16,7 @@ var Provider = "https://nodes.devnet.thetangle.org:443"
 var MWM int64 = 9 // In the real world set this to 14 or 15!
 
 /*
-Some test nodes you can use
+Some test nodes that perhaps suit you better
 https://nodes.devnet.thetangle.org:443
 https://nodes.devnet.iota.org:443
 https://devnet.thetangle.org:443

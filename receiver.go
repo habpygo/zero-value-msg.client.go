@@ -7,7 +7,7 @@ import (
 
 	"github.com/habpygo/mam.client.go/mamutils"
 
-	"github.com/giota"
+	"github.com/iotaledger/giota"
 )
 
 type Transaction struct {
@@ -21,17 +21,19 @@ type ApiTransactionsFinder interface {
 	FindTransactions(giota.FindTransactionsRequest) ([]giota.Transaction, error)
 }
 
+// ReadTransactions reads all the historic transaction data from a particular address
 func ReadTransactions(address string, f ApiTransactionsFinder) ([]Transaction, error) {
-	iotaAdress, err := giota.ToAddress(address)
+	iotaAddress, err := giota.ToAddress(address)
 	if err != nil {
 		return nil, err
 	}
 
 	req := giota.FindTransactionsRequest{
-		Addresses: []giota.Address{iotaAdress},
+		Addresses: []giota.Address{iotaAddress},
 	}
 
 	foundTx, err := f.FindTransactions(req)
+	//fmt.Println("foundTx is: ", foundTx)
 	if err != nil {
 		return nil, err
 	}
@@ -42,6 +44,7 @@ func ReadTransactions(address string, f ApiTransactionsFinder) ([]Transaction, e
 
 	transactions := make([]Transaction, len(foundTx))
 	for i, t := range foundTx {
+		//message, err := mamutils.FromMAMTrytes(t.SignatureMessageFragment)
 		message, err := mamutils.FromMAMTrytes(t.SignatureMessageFragment)
 		if err != nil {
 			return nil, err
@@ -54,6 +57,7 @@ func ReadTransactions(address string, f ApiTransactionsFinder) ([]Transaction, e
 		}
 	}
 
+	fmt.Println("Total number of transactions found on tangle are: ", len(transactions))
 	return transactions, nil
 }
 
@@ -89,3 +93,45 @@ func ReadTransaction(transactionID string, r ApiTransactionsReader) (Transaction
 
 	return transaction, nil
 }
+
+// func ReadTransactions(address string, f ApiTransactionsFinder) ([]Transaction, error) {
+// 	iotaAddress, err := giota.ToAddress(address)
+// 	if err != nil {
+// 		return nil, err
+// 	}
+// 	fmt.Println("iotaAddress is: ", iotaAddress)
+
+// 	req := giota.FindTransactionsRequest{
+// 		Addresses: []giota.Address{iotaAddress},
+// 	}
+// 	fmt.Println("req.Addresses is: ", req.Addresses)
+// 	fmt.Println("req.Approvees is: ", req.Approvees)
+// 	fmt.Println("req.Bundles is: ", req.Bundles)
+// 	fmt.Println("req.Command is: ", req.Command)
+// 	fmt.Println("req.Tags is: ", req.Tags)
+
+// 	foundTx, err := f.FindTransactions(req)
+// 	if err != nil {
+// 		return nil, err
+// 	}
+
+// 	sort.Slice(foundTx, func(i, j int) bool {
+// 		return !(foundTx[i].Timestamp.Unix() < foundTx[j].Timestamp.Unix())
+// 	})
+
+// 	transactions := make([]Transaction, len(foundTx))
+// 	for i, t := range foundTx {
+// 		message, err := mamutils.FromMAMTrytes(t.SignatureMessageFragment)
+// 		if err != nil {
+// 			return nil, err
+// 		}
+// 		transactions[i] = Transaction{
+// 			Message:   message,
+// 			Value:     t.Value,
+// 			Timestamp: t.Timestamp,
+// 			Recipient: string(t.Address),
+// 		}
+// 	}
+
+// 	return transactions, nil
+// }

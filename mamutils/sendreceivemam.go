@@ -26,7 +26,7 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/giota"
+	"github.com/iotaledger/giota"
 )
 
 //ToMAMTrytes checks its validity and casts to giota.Trytes.
@@ -71,8 +71,10 @@ func FromMAMTrytes(inputTrytes giota.Trytes) (string, error) {
 	// Check if input is an even number of giota.Trytes
 	err = IsValidTrytes(inputTrytes)
 	if err != nil {
-		err := errors.New("wrong trytes input")
-		return "", err
+		stringTrytes := "SBVCBDCDFDTCEAHDWCXCGDEAADTCGDGDPCVCTCFAEABCCDADTCHDWCXCBDVCEAKDTCBDHDEAKDFDCDBDVCEAKDXCHDWCEAHDWCTCEAXCBDDDIDHDEACCFDMDHDTCGDEAUCCDFDEAIDBDZCBDCDKDBDEAFDTCPCGDCDBDGDSA"
+		inputTrytes, _ = giota.ToTrytes(stringTrytes)
+		//err := errors.New("IsValidTrytes -> wrong trytes input")
+		//return "", err
 
 	}
 

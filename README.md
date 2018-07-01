@@ -1,6 +1,7 @@
 # mam.client.go
+Under construction.
 
-WARNING: Do not use this in a production environment! Under construction.
+WARNING: Do not use this in a production environment! 
 MAM specification is not fully implemented yet. Transactions are not secure as Merkle Tree authentication has not been implemented yet.
 
 Small project to implement Masked Authenticated Messaging on the IOTA tangle with Golang.

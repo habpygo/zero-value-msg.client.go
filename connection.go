@@ -1,6 +1,9 @@
 package communications
 
-import "github.com/giota"
+import (
+	"github.com/habpygo/mam.client.go/metadata"
+	"github.com/iotaledger/giota"
+)
 
 //NewConnection establishes a connection with the given provider and the seed
 func NewConnection(provider, seed string) (*Connection, error) {
@@ -8,7 +11,7 @@ func NewConnection(provider, seed string) (*Connection, error) {
 		api:      giota.NewAPI(provider, nil),
 		seed:     seed,
 		security: 3,
-		mwm:      9,
+		mwm:      metadata.MWM,
 	}, nil
 }
 

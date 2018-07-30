@@ -1,16 +1,9 @@
 # mam.client.go
-Under construction.
+WARNING! Under construction. This is not according to the IOTA MAM specificaiton yet. With this lib you can just send 0 value messages to the tangle. Transactions are not secure as Masking and Merkle Tree authentication has not been implemented yet.
 
-WARNING: Do not use this in a production environment! 
-MAM specification is not fully implemented yet. Transactions are not secure as Merkle Tree authentication has not been implemented yet.
+This project is still under construction (see TODO) with the aim to let IoT/sensor data be immutably recorded on the tangle.
 
-Small project to implement Masked Authenticated Messaging on the IOTA tangle with Golang.
-This project is still under construction (see TODO) with the aim to get IoT sensors and devices to send MAMs.
 
-Recently IOTA has introduced a pretty feisty test environment and test sites. You can find some sites in package `metadata`.
-
-If you don't have a seed yet, follow the description here: https://iota.readme.io/docs/securely-generating-a-seed or, you
-can use the `giotan` package at https://github.com/iotaledger/giotan. With this package you can easily generate a new seed by running `$ giotan new` then run `$ giotan addresses` and paste the generated address in the input field.
 
 
 ## Install
@@ -33,8 +26,13 @@ To be able to do testing and assertions you have to install the `stretchr` packa
 go get -u github.com/stretchr/testify
 ```
 
+## Sending Messages to the IOTA tangle with Go
 
-## Sending MAMs to the IOTA tangle with Go
+## Testing
+
+This is for IoT/sensor testing only.  Recently IOTA has introduced a pretty feisty test environment and test sites. You can find some sites in package `metadata`.
+
+If you don't have a seed yet, follow the description here: https://iota.readme.io/docs/securely-generating-a-seed or, you can use the `giotan` package at https://github.com/iotaledger/giotan. With this package you can easily generate a new seed by running `$ giotan new` then run `$ giotan addresses` and paste the generated address in the input field.
 
 ### API
 
@@ -130,15 +128,10 @@ If the Node is offline try another one, mentioned above.
 
 TODO's are also pertinent to `webmamgiota`.
 ### TODOs
-- [x] Implement MAM specs
+- [ ] Implement MAM specs
 - [ ] GoDoc
 - [ ] Travis (This appeared to be a (solved) giota lib error)
 - [ ] Make web-app (see webmamgiota). Under construction
-- [ ] Read sensor data, e.g. RuuVi tag
-- [ ] Make use of Merkle tree 
-- [ ] More Read options
-- [ ] Read by TransactionId
-
 
 
 

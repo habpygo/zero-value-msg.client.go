@@ -9,6 +9,12 @@ A: It is a nice way to quickly test functionality of your sensor or device. Also
 
 
 
+# mam.client.go
+
+This lib will be work in process! See other repo.
+
+
+
 
 ## Install
 

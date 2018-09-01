@@ -48,7 +48,7 @@ If you don't have a seed yet, follow the description here: https://iota.readme.i
 
 #### Create a new Connection
 ```go
-import gmam "github.com/habpygo/m.client.go"
+import gmam "github.com/habpygo/zero-value-msg.client.go"
 
 func main(){
     c, err := gmam.NewConnection("someNodeURL", "yourSeed")
@@ -61,7 +61,7 @@ func main(){
 
 #### Send a MAM to the IOTA tangle
 ```go
-import gmam "github.com/habpygo/mam.client.go"
+import gmam "github.com/habpygo/zero-value-msg.client.go"
 
 func main(){
     c, err := gmam.NewConnection("someNodeURL", "yourSeed")
@@ -81,7 +81,7 @@ After sending, you find your transaction here https://testnet.thetangle.org/ giv
 #### Read data from the IOTA tangle
 Reading all transaction received by a certain adress:
 ```go
-import gmam "github.com/habpygo/mam.client.go"
+import gmam "github.com/habpygo/zero-value-msg.client.go"
 
 func main(){
     c, err := gmam.NewConnection("someNodeURL", "")
@@ -104,7 +104,7 @@ The seed can be ommitted here, since reading does not require an account
 
 Reading a special transaction by transactionID:
 ```go
-import gmam "github.com/habpygo/mam.client.go"
+import gmam "github.com/habpygo/zero-value-msg.client.go"
 
 func main(){
     c, err := gmam.NewConnection("someNodeURL", "")
@@ -138,7 +138,7 @@ If the Node is offline try another one, mentioned above.
 
 TODO's are also pertinent to `webmamgiota`.
 ### TODOs
-- [ ] Implement MAM specs
+- [ ] Implement MAM specs in other repo `mam.client.go` 
 - [ ] GoDoc
 - [ ] Travis (This appeared to be a (solved) giota lib error)
 - [ ] Make web-app (see webmamgiota). Under construction

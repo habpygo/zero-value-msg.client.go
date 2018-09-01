@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"iota/mam.client.go/mamutils"
+	"github.com/habpygo/zero-value-msg.client.go/mamutils"
 
 	"github.com/iotaledger/giota"
 	"github.com/stretchr/testify/assert"

@@ -4,8 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"iota/mam.client.go/mamutils"
-
+	"github.com/habpygo/zero-value-msg.client.go/mamutils"
 	"github.com/stretchr/testify/assert"
 
 	"github.com/iotaledger/giota"

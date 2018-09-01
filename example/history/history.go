@@ -24,9 +24,8 @@ package main
 import (
 	"fmt"
 
-	//gmam "github.com/habpygo/mam.client.go"
-	gmam "github.com/habpygo/mam.client.go"
-	"github.com/habpygo/mam.client.go/metadata"
+	gmam "github.com/habpygo/zero-value-msg.client.go"
+	"github.com/habpygo/zero-value-msg.client.go/metadata"
 )
 
 func main() {

@@ -1,7 +1,11 @@
-# mam.client.go
-WARNING! Under construction. This is not according to the IOTA MAM specificaiton yet. With this lib you can just send 0 value messages to the tangle. Transactions are not secure as Masking and Merkle Tree authentication has not been implemented yet.
+# zero-value-msg.client.go
+WARNING! This is not according to the IOTA MAM specification. That will be done in another repo. With this lib you can just send 0 value messages to the tangle. Transactions are not secure as Masking and Merkle Tree authentication has not been implemented yet.
 
 This project is still under construction (see TODO) with the aim to let IoT/sensor data be immutably recorded on the tangle.
+
+Q: Why bothering writing/reading zero-value messages to and from the tangle ?
+
+A: It is a nice way to quickly test functionality of your sensor or device. Also, as it stands now, Qubic smart-contracts, written in ABRA, will be sent with zero-value messages. If so, this will function as the smart contract wrapper.
 
 
 
@@ -17,7 +21,7 @@ go get -u github.com/iotaledger/giota
 After that you can download the mamgoiota package.
 
 ```javascript
-go get -u github.com/habpygo/mam.client.go
+go get -u github.com/habpygo/zero-value-msg.client.go
 ```
 
 To be able to do testing and assertions you have to install the `stretchr` package
@@ -38,7 +42,7 @@ If you don't have a seed yet, follow the description here: https://iota.readme.i
 
 #### Create a new Connection
 ```go
-import gmam "github.com/habpygo/mam.client.go"
+import gmam "github.com/habpygo/m.client.go"
 
 func main(){
     c, err := gmam.NewConnection("someNodeURL", "yourSeed")

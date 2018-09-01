@@ -5,7 +5,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/habpygo/mam.client.go/mamutils"
+	"github.com/habpygo/zero-value-msg.client.go/mamutils"
 
 	"github.com/iotaledger/giota"
 )

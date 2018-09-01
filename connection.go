@@ -1,7 +1,7 @@
 package communications
 
 import (
-	"github.com/habpygo/mam.client.go/metadata"
+	"github.com/habpygo/zero-value-msg.client.go/metadata"
 	"github.com/iotaledger/giota"
 )
 

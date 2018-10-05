@@ -1,7 +1,7 @@
 # zero-value-msg.client.go
 WARNING! This is not according to the IOTA MAM specification. That will be done in another repo. With this lib you can just send 0 value messages to the tangle. Transactions are not secure as Masking and Merkle Tree authentication has not been implemented yet.
 
-This project is still under construction (see TODO) with the aim to let IoT/sensor data be immutably recorded on the tangle.
+This project is not maintained.
 
 Q: Why bothering writing/reading zero-value messages to and from the tangle ?
 
@@ -23,6 +23,7 @@ It is assumed that you have Golang installed. You also need to install the Go li
 ```javascript
 go get -u github.com/iotaledger/giota
 ```
+Also `giota` is in development and currently being refactored. This will change `PATH` variables if not more. You'll have to make corrections yourself.
 
 After that you can download the mamgoiota package.
 
